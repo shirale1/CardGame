@@ -1,8 +1,10 @@
-﻿using System;
+﻿using CardGame;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace CardGame
 {
@@ -28,20 +30,49 @@ namespace CardGame
                 }
             }
         }
+<<<<<<< HEAD
+        private void swap(int i,int j)
+        { 
+            Card save = cards[i];
+            cards[i] = cards[j];
+            cards[j] = save;
+
+        }
+        public Card Peek() { return null; }
+
+        public void Shuffle() 
+        {
+            int j;
+            Random rand = new Random();
+    
+        for (int i = 0; i < cards.Length; i++)
+        {
+            j = rand.Next(i, 52);
+                swap(i, j);
+        }
+=======
         public Card Peek() { return null; }
         public void Shuffle() 
         {
 
+>>>>>>> 7be8420de0a3c3fcff01fa129b70730c334cf089
         }
         public Card Deal() 
         { Card c = cards[top];
             top++;
             return c;
         }
+<<<<<<< HEAD
+        public void Reset() 
+        {
+            top = 0;
+=======
 
         public void Reset() 
         {
             
+>>>>>>> 7be8420de0a3c3fcff01fa129b70730c334cf089
         }
     }
 }
+
